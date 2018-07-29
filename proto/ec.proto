@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package ec;
+
+service ProductService {
+  rpc GetProducts(GetProductsRequest) returns (GetProductsResponse) {};
+  rpc GetByProductId(GetByProductIdRequest) returns (GetByProductIdResponse) {};
+}
+
+message GetProductsRequest {
+}
+
+message GetProductsResponse {
+  repeated Product products = 1;
+}
+
+message GetByProductIdRequest {
+  int32 product_id = 1;
+}
+
+message GetByProductIdResponse {
+  Product product = 1;
+}
+
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  double price = 3;
+
+  string created_at = 4;
+  string updated_at = 5;
+
+  repeated Tag tags = 6;
+}
+
+message Tag {
+  int32 id = 1;
+  string name = 2;
+
+  string created_at = 3;
+  string updated_at = 4;
+}

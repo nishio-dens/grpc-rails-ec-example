@@ -1,0 +1,35 @@
+<h2><%= @product.name %></h2>
+
+<table>
+  <tbody>
+    <tr>
+      <th>ID:</th>
+      <td><%= @product.id %></td>
+    </tr>
+
+    <tr>
+      <th>Name:</th>
+      <td><%= @product.name %></td>
+    </tr>
+
+    <tr>
+      <th>Price:</th>
+      <td><%= @product.price %></td>
+    </tr>
+
+    <tr>
+      <th>UpdatedAt:</th>
+      <td><%= @product.updated_at%></td>
+    </tr>
+
+    <tr>
+      <th>CreatedAt:</th>
+      <td><%= @product.created_at %></td>
+    </tr>
+
+    <tr>
+      <th>Tags:</th>
+      <td><%= @product.tags.map(&:name).join(",") %></td>
+    </tr>
+  </tbody>
+</table>

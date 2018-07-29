@@ -1,0 +1,28 @@
+<h2>EC Example</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>name</th>
+      <th>price</th>
+      <th>created_at</th>
+      <th>updated_at</th>
+      <th>tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td>
+          <%= link_to product.id, product_path(product.id) %>
+        </td>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= product.created_at %></td>
+        <td><%= product.updated_at %></td>
+        <td><%= product.tags.map(&:name).join(",") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
