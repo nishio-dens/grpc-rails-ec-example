@@ -2,7 +2,7 @@
 # Source: ec.proto for package 'ec'
 
 require 'grpc'
-require 'ec_pb'
+# require 'ec_pb'
 
 module Ec
   module ProductService
