@@ -11,7 +11,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'convergence-rails'
-gem 'grpc'
+gem 'rails_grpc', path: "../rails_grpc"
+gem 'grpc', path: "../grpc"
 gem 'google-protobuf', path: "../protobuf/ruby"
 
 group :development, :test do
