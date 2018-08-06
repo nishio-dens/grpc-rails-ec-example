@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package ec.deep;
+
+service ProductService {
+  rpc GetProducts(GetProductsRequest) returns (GetProductsResponse) {};
+}
+
+message GetProductsRequest {
+}
+
+message GetProductsResponse {
+  repeated DeepProduct products = 1;
+}
+
+message DeepProduct {
+  int32 id = 1;
+  string name = 2;
+}
+
