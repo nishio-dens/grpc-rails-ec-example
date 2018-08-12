@@ -1,4 +1,4 @@
-Ec::Product.class_eval do
+class Ec::Product
   PORT = "127.0.0.1:8080"
 
   def self.all
